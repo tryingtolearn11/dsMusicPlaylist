@@ -1,23 +1,72 @@
 #include<iostream>
 using namespace std;
 
-struct node
-{
-  string song;
-  string artist;
-  node* next;
-};
-
-class Linklist 
-{
-  private:
-    node* L; //head
-    size_t listSize;
+class Node{
   public:
-    Linklist();
-    void insertNode(node* newNode);
-    void removeNode(int position );
-    void printList();
+    string song;
+    string artist;
+    Node* next;
+
+  Node() {
+    song = "no song";
+    artist = "no artist";
+    next = NULL;
+  }
+
+  Node (string k, string d) 
+  {
+    song = k;
+    artist = d;
+  }
 };
 
+class SinglyLinkedList {
+  public:
+    Node* head;
 
+    SinglyLinkedList() 
+    {
+      head = NULL;
+    }
+
+    SinglyLinkedList(Node* n) 
+    {
+      head = n;
+    }
+
+    void appendNode(Node*n)
+    {
+      if (head == NULL)
+      {
+        head = n;
+        cout << "Node appended" << '\n';
+      }
+      else
+      {
+        Node* ptr = head;
+        while (ptr->next!=NULL)
+        {
+          ptr = ptr->next;
+        }
+        ptr->next = n;
+        cout << "Node appended" << '\n';
+      }
+    }
+
+    void printList(string nameOfPlaylist)
+    {
+      if (head== NULL) {
+        cout << "no nodes" << '\n';
+      }
+      else {
+        cout << nameOfPlaylist << ": ";
+        Node* temp = head;
+        while(temp!=NULL)
+        {
+          cout << "( Song: " << temp->song << " , "<< "Artist: " << temp->artist << ") ---> ";
+          temp = temp->next;
+        }
+      }
+    }
+
+};

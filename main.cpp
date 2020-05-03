@@ -2,46 +2,48 @@
 #include "playlist.h"
 using namespace std;
 
-Linklist::Linklist()
+
+
+int main()
 {
-    L -> song = "head no song";
-    L -> artist = "head no artist";
-    L -> next = NULL;
-    listSize = 0;
-}
-void Linklist::printList()
-{
-  node* p = L;
-  while(p->next !=NULL) {
-    cout << p->song << '\n';
-    cout << p->artist << '\n';
-    p = p->next;
-  }
-  cout << '\n';
-}
+  SinglyLinkedList s;
+  string k, d, nameOfPlaylist;
+  int option;
+  do {
+      cout << '\n' << "What action to perform?" << "Choose the number, 0 to Exit" << '\n';
+      cout << "1. add new song to playlist" << '\n';
+      cout << "2. Print playlist" << '\n';
 
-void Linklist::insertNode(node* newNode)
-{
-  //If list is empty
- if (L == NULL) {
-   L = newNode;
-   listSize++;
- }
- node* P = new node;
- P->next = L;
- L= P;
+      cin >> option;
+      Node* n1 = new Node();\
+      cout << "Enter Name of your new Playlist" << '\n';
+          getline(cin,nameOfPlaylist);
 
-}
+      switch(option)
+      {
+        case 0:
+          break;
+        case 1:
+          cout << "Enter Song name  " << '\n';
+            getline(cin,k);
+          cout << "Enter artist name  " << '\n';
+            getline(cin,d);
+          n1->song = k;
+          n1->artist = d;
+          s.appendNode(n1);
+        case 2:
+        s.printList(nameOfPlaylist);
+
+      }
+          
+      
 
 
+  } while(option!=0);
 
+    return 0;
+  
+ 
+  
 
-int main() {
-node * A = new node;
-A -> song = "We Are";
-A -> artist = "Vertical Horizon";
-
-Linklist mylist;
-mylist.insertNode(A);
-mylist.printList();
 }
