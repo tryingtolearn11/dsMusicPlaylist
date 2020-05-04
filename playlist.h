@@ -52,6 +52,8 @@ class SinglyLinkedList {
         cout << "Node appended" << '\n';
       }
     }
+    
+
 
     void printList(string nameOfPlaylist)
     {
