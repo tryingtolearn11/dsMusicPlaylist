@@ -33,6 +33,13 @@ int main()
           s.appendNode(n1);
         case 2:
         s.printList(nameOfPlaylist);
+        case 3:
+        cout << "Enter what you want to delete" << endl;
+        getline(cin, a);
+        s.deleteSongs(a);
+        case 4:
+        s.printList(nameOfPlaylist);
+      }
 
       }
           

@@ -52,7 +52,7 @@ class SinglyLinkedList {
         cout << "Node appended" << '\n';
       }
     }
-        void deleteSongs (Node *n, string s) {
+    void deleteSongs (Node *n, string s) {
         if (head == NULL) {
             cout << "The list is empty" << endl;
         }
