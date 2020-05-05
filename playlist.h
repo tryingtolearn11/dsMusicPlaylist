@@ -77,17 +77,16 @@ class SinglyLinkedList {
                     }
                     if (temp != NULL) {
                         prevptr->next=temp->next;
-                        cout << "Song is unlinked" << s << endl;
+                        cout << "Song " << s << " is removed" << endl;
                     }
                     else {
-                      cout << "There are no songs with " << s <<endl;
+                      cout << "There are no songs with " << s << endl;
                     }
                 }
             }
           }
     }
                    
-  
     void printList(string nameOfPlaylist)
     {
       if (head== NULL) {
