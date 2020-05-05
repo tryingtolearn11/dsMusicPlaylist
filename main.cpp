@@ -10,7 +10,7 @@ int main()
 
   do {
       cout << '\n' << "What action to perform? " << "Choose the number, 0 to Exit" << '\n';
-      cout << "1. add new song to playlist" << '\n';
+      cout << "1. Add new song to playlist" << '\n';
       cout << "2. Print playlist" << '\n';
       cout << "3. Delete song from the playlist" << endl;
       cout << "4. Edit Playlist Name" << '\n';
