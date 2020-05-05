@@ -86,17 +86,6 @@ class SinglyLinkedList {
             }
         }          
     }
-    void skipSongs ( string s) {
-      if (head == NULL) {
-        cout << "The list is empty" << endl;
-        }
-        else if (head != NULL) {
-            if (head->next->song == s) {
-                head = head->next->next;
-                cout << s << " is skipped" << endl;
-            }
-        }
-    }
     
     void printList(string nameOfPlaylist)
     {
