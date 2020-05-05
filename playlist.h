@@ -53,7 +53,7 @@ class SinglyLinkedList {
       }
     }
   
-    void deleteSongs ( string s) {
+    void deleteSongs (string s) {
         if (head == NULL) {
             cout << "The playlist is empty" << endl;
         }
@@ -61,7 +61,6 @@ class SinglyLinkedList {
             if (head->song == s) {
                 head = head->next;
                 cout << s << " is removed " << endl;
-            }
             }
             else {
                 Node *temp = NULL;
@@ -80,8 +79,12 @@ class SinglyLinkedList {
                         prevptr->next=temp->next;
                         cout << "Song is unlinked" << s << endl;
                     }
+                    else {
+                      cout << "There are no songs with " << s <<endl;
+                    }
                 }
             }
+          }
     }
                    
   
